@@ -1,0 +1,105 @@
+/* Genel Stil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sol Menü */
+.menu {
+    width: 250px;
+    background-color: #333;
+    padding: 20px;
+    color: white;
+    height: 100vh;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu .menu-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menu .menu-button:hover {
+    background-color: #45a049;
+}
+
+/* Sağ Alan (İçerik) */
+.content {
+    width: calc(100% - 250px);
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Form Container */
+.form-container {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form input, form select, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Sonuç Divi */
+#viewResult {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* Sayfa Geçişi */
+.active-page {
+    display: block;
+}
+
+.hidden-page {
+    display: none;
+}
