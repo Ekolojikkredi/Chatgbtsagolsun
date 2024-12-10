@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekolojik Kredi Sistemi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sol Menü -->
+        <div class="menu">
+            <ul>
+                <li><button class="menu-button" onclick="openPage('nedir')">Ekolojik Kredi Nedir?</button></li>
+                <li><button class="menu-button" onclick="openPage('geriDonusum')">Geri Dönüşüm Nedir?</button></li>
+                <li><button class="menu-button" onclick="openPage('bizeUlasin')">Bize Ulaşın</button></li>
+                <li><button class="menu-button" onclick="openPage('hazirlayanlar')">Hazırlayanlar</button></li>
+            </ul>
+        </div>
+
+        <!-- Sağ Alan -->
+        <div id="content" class="content">
+            <!-- Kayıt ve Veri Girişi -->
+            <div id="okulKayitFormContainer" class="form-container">
+                <h2>Okul Kayıt Formu</h2>
+                <form id="okulKayitForm">
+                    <label>Okul Adı:</label><input type="text" id="schoolName" required>
+                    <label>Okul Şifresi:</label><input type="password" id="schoolPassword" required>
+                    <label>İl:</label><input type="text" id="schoolProvince" required>
+                    <label>İlçe:</label><input type="text" id="schoolDistrict" required>
+                    <button type="submit">Okul Kaydını Yap</button>
+                </form>
+            </div>
+
+            <div id="ogrenciKayitFormContainer" class="form-container">
+                <h2>Öğrenci Kayıt Formu</h2>
+                <form id="ogrenciKayitForm">
+                    <label>Ad:</label><input type="text" id="studentName" required>
+                    <label>Soyad:</label><input type="text" id="studentSurname" required>
+                    <label>E-posta:</label><input type="email" id="studentEmail" required>
+                    <label>Öğrenci Numarası:</label><input type="number" id="studentNumber" required>
+                    <label>Sınıf:</label><input type="text" id="studentClass" required>
+                    <label>Telefon Numarası:</label><input type="text" id="studentPhone" required>
+                    <button type="submit">Öğrenci Kaydını Yap</button>
+                </form>
+            </div>
+
+            <div id="dataEntryFormContainer" class="form-container">
+                <h2>Veri Girişi</h2>
+                <form id="dataEntryForm">
+                    <label>Öğrenci Numarası:</label><input type="text" id="studentNumberEntry" required>
+                    <label>Atık Türü:</label><select id="wasteType" required>
+                        <option value="Yağ">Yağ</option>
+                        <option value="Tekstil">Tekstil</option>
+                        <option value="Pil">Pil</option>
+                        <option value="Elektronik">Elektronik</option>
+                        <option value="Kağıt">Kağıt</option>
+                        <option value="Cam">Cam</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Plastik">Plastik</option>
+                    </select>
+                    <label>Atık Miktarı (kg):</label><input type="number" id="wasteWeight" required>
+                    <label>Veriyi Kimin Girdiği:</label><input type="text" id="enteredBy" required>
+                    <button type="submit">Veri Girişi Yap</button>
+                </form>
+            </div>
+
+            <div id="viewDataFormContainer" class="form-container">
+                <h2>Veri Görüntüleme</h2>
+                <form id="viewDataForm">
+                    <label>E-posta:</label><input type="email" id="viewStudentEmail" required>
+                    <label>Öğrenci Numarası:</label><input type="number" id="viewStudentNumber" required>
+                    <button type="submit">Veri Görüntüle</button>
+                </form>
+                <div id="viewResult"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
